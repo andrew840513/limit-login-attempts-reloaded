@@ -1198,7 +1198,7 @@ class LimitLoginAttempts {
 			$error->add( 'username_blacklisted', "<strong>ERROR:</strong> Too many failed login attempts." );
 		} else {
 			// This error should be the same as in "shake it" filter below
-			$error->add( 'too_many_retries', $this->error_msg() );
+			$error->add( $this->error_msg() , $this->error_msg() );
 		}
 
 		return $error;
